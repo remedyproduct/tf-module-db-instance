@@ -39,7 +39,7 @@ No Modules.
 | instance\_class | Database Instance class | `string` | `"db.t2.micro"` | no |
 | name | Load Balancer Name | `string` | n/a | yes |
 | storage\_size | Size in Gb for DB Instance | `number` | `5` | no |
-| subnet\_ids | The list of VPC subnets Database Instance should be attached to | `list` | n/a | yes |
+| subnet\_ids | The list of VPC subnets Database Instance should be attached to | `list(any)` | n/a | yes |
 
 ## Outputs
 
