@@ -10,30 +10,30 @@ variable "environment" {
 }
 
 variable "storage_size" {
-  type = number
+  type        = number
   description = "Size in Gb for DB Instance"
-  default = 5
+  default     = 5
 }
 
 variable "instance_class" {
-  type = string
+  type        = string
   description = "Database Instance class"
-  default = "db.t2.micro"
+  default     = "db.t2.micro"
 }
 
 variable "db_engine" {
-  type = string
+  type        = string
   description = "Database Engine (mysql, postgres, etc.)"
-  default = "postgres"
+  default     = "postgres"
 }
 
 variable "db_engine_version" {
-  type = string
+  type        = string
   description = "The version of choosen `db_engine`"
-  default = "9.6.20"
+  default     = "9.6.20"
 }
 
 variable "subnet_ids" {
-  type = list
+  type        = list(any)
   description = "The list of VPC subnets Database Instance should be attached to"
 }

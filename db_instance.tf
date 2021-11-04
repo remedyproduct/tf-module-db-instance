@@ -14,6 +14,8 @@ resource "aws_db_instance" "main" {
   db_subnet_group_name = aws_db_subnet_group.default.name
   multi_az             = true
 
+  final_snapshot_identifier = substr(format("%s-%s-%s-%s", var.name, var.environment, "db", random_string.snapshot_identifier_suffix.result), 0, 32)
+
   identifier = substr(format("%s-%s-%s", var.name, var.environment, "db"), 0, 32)
 
   name = random_string.database.result

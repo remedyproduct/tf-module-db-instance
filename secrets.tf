@@ -12,3 +12,8 @@ resource "random_password" "password" {
   length  = 32
   special = false
 }
+
+resource "random_string" "snapshot_identifier_suffix" {
+  length  = 8
+  special = false
+}
